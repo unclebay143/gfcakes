@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Welcome {% endblock %}
+    {% block content %}
+    {% include 'nav.html' %}
+        <div class="container">
+            <div class="header-content container-bg">
+                <h2>Welcome to G.F Cakes</h2>
+                    <p>  G & F is with the motion of serving you with your desired sweet 
+                           cakes and candies for your special events such as weddings, anniversaries, 
+                           birthdays, naming,happy hour, feel good moment, religion programmes.  </p>
+            </div>
+        </div>
+        <div class="img-gallery">
+            <div>
+
+                <img src="static/img/chef.jpg" alt="" id="img-g" width="100%" >
+
+            </div>
+            <div >
+
+                <img src="static/img/award.jpg" alt="" id="img-g" width="100%" >
+
+            </div>
+            <div >
+
+                <img src="static/img/chef.jpg" alt="" id="img-g" width="100%" >
+
+            </div>
+        </div>
+        <div class=" container">
+            <div class="container-centered" id="about">
+            <h2>About The Baker</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos provident perferendis blanditiis quas. A, dolorem culpa illum reprehenderit officia numquam, iusto dignissimos veritatis dolorum nobis ea saepe at. Possimus!</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos provident perferendis blanditiis quas. A, dolorem culpa illum reprehenderit officia numquam, iusto dignissimos veritatis dolorum nobis ea saepe at. Possimus!</span>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quos provident perferendis blanditiis quas. A, dolorem culpa illum reprehenderit officia numquam, iusto dignissimos veritatis dolorum nobis ea saepe at. Possimus!</span>
+            </div>
+        </div>
+        
+    {% include 'foot.html' %}
+    {% endblock %}

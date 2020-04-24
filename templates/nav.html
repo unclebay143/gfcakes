@@ -1,0 +1,16 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/nav.css' %}">
+
+{% block content %}
+<div class="header">
+  <a href="#default" class="logo">G.F Cakes</a>
+  <div class="nav-right" id="nav-right-id">
+  	        <a  href="{% url 'index' %}" >Home</a>
+            <a  href="{% url 'cakes' %}" >Our Cakes</a>
+            <a  href="{% url 'store' %}" >Our store</a>
+            <a href="#search">Search</a>
+            <a href="#about" class="hide-link">About</a>
+            <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="navfold()">&#9776;</a>
+  </div>
+</div>
+{% endblock %}

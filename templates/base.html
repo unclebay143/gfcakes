@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{%  block title %} {% endblock %}</title>
+    <meta name="Author" content="Ayodele Samuel Adebayo (Uncle BigBay)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="{% static 'js/imgexpand.js' %}"></script>
+    <script src="{% static 'js/next.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cakes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lake.css' %}">
+
+</head>
+<body>
+    {% block content %}
+
+
+    
+
+    {% endblock %}
+</body>
+</html>

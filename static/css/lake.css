@@ -1,0 +1,49 @@
+.container-1{
+    margin-left: 75px;
+    margin-top: 19px;
+
+}
+
+th{
+    border-style: hidden;
+}
+
+/* #img-style{
+    padding: 12px;
+    border-style: hidden;
+}
+
+#img-1 img{
+} */
+
+#attr{
+    text-align: ;
+}
+
+#attr li, #attr ul{
+    background-color: hotpink;
+    margin: px;
+    overflow: hidden;
+    padding-left: 0;
+}
+
+#tab-1 table,#tab-2 table,#tab-3 table,#tab-4 table,#tab-5 table,#tab-6 table,#tab-6 table,#tab-7 
+table,#tab-8 table,#tab-9 table,#tab-10 table,#tab-11 table,#tab-12 table
+{
+    background-color: powderblue;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+
+}
+
+#tab-1, #tab-2, #tab-3, #tab-4, #tab-5, #tab-6, #tab-7, #tab-8, #tab-9, #tab-10, #tab-11, #tab-12{
+    /* padding: 7px;
+    margin-bottom: 9px;
+    margin-left: 25px; */
+    background-color: hotpink;
+}
+
+img{
+    margin: 0 auto; 
+}

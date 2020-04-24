@@ -1,0 +1,22 @@
+#foot{
+    background-color: hotpink;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 23px;
+    margin-top: 15%;
+    /* overflow: hidden; */
+}
+
+#foot span{
+    font-size: medium;
+}
+
+#foot p{
+    font-size: medium;
+}
+
+#foot a{
+    color: #0056b3;
+    font-size: medium;
+}

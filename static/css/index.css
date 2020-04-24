@@ -1,0 +1,40 @@
+.container{
+    padding: 12px;
+}
+.header-content legend{
+
+}
+
+.img-gallery{
+    display: flex;
+    
+
+}
+.img-gallery #img-g{
+    flex:33.33%;
+    padding:5px;
+    border: 1px solid pink; /* #ddd Gray border */
+    border-radius: 4px;  /* Rounded border */
+
+}
+    
+
+
+.container-centered{
+    clear: both;
+    text-align:center;
+    padding: 32px;
+}
+
+#about{
+    background-color: pink;
+    
+}
+
+.container-bg{
+    padding: 32px;
+    background-color: pink;
+    display: none;
+
+}
+
