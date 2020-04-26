@@ -23,7 +23,7 @@
 }
 
 .header a:hover {
-  background-color: #ddd;
+  background-color: pink;
   color: black;
 }
 
@@ -38,9 +38,10 @@
 .nav-right .icon {
     display: none;
 }
-@media screen and (max-width: 600px) {
-  .nav-right a:not(:first-child){
+@media screen and (max-width: 700px) {
+  .nav-right a{ /*a:not(:first-child) to display Home after disapearing*/
     display: none;
+    clear: both;
   }
   .nav-right a.icon {
     float: right;
@@ -48,7 +49,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .nav-right.responsive {position: relative;}
   .nav-right.responsive .icon {
     position: absolute;
@@ -56,8 +57,9 @@
     top: 0;
   }
   .nav-right.responsive a {
+    margin-top:4px;
     float: none;
-    display: block;
+    display: flex;
     text-align: left;
   }
   .nav-right.responsive  {float: none;}
