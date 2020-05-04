@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Cake, PostImage
 
 # Create your views here.
 
@@ -10,10 +11,17 @@ def Index(request):
 
 
 def  Cakes(request):
-    return render(request, 'cakes.html')
+    post = Cake.objects.all()
+    return render(request, 'cakes.html', {"post":post})
 
 def Contact(request):
     return render(request, 'contact.html')
 
 def Store(request):
     return render(request, 'store.html')
+
+def Upload(request):
+    post = get_object_or_404(Cake)
+    return render(request, 'upload.html',{
+        'post':post,        
+    })

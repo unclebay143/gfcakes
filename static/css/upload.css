@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+}
+.content{
+    margin-left: 25%;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        display: block;
+    }
+    .header{
+        text-align: center;
+        background-color: hotpink;
+        overflow: hidden;
+        padding: 20px 10px;
+        margin-top: 0;
+        color: white;
+        font-size: 6em;
+    }
+    input[type=text]{
+        width: 72%;
+        height: 50px;
+        padding: 19px 24px;
+        box-sizing: border-box;
+        background-color: #f3f3;
+        border: none;
+        font-size: 30px;
+        
+    }
+    input[type=file]{
+        border: none;
+        font: bold italic 30px/12px Georgia;
+        padding: 12px 12px;
+    }
+    
+    button{
+        font: bold italic 30px/12px Georgia;
+        border:none;
+        color:white;
+        padding: 21px 210px 30px;
+        border-radius: 9px;
+        border-color: green;
+        background-color: dodgerblue;
+        opacity: 1;
+    }
+    button:hover{
+        padding: 19px 207px 28px;
+        opacity: 0.6;
+        cursor: pointer;
+        background-color: royalblue;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        display: block;
+    }
+    .header{
+        text-align: center;
+        background-color: hotpink;
+        overflow: hidden;
+        padding: 20px 10px;
+        margin-top: 0;
+        color: white;
+        font-size: 32px;
+    }
+    input[type=text]{
+        width: 72%;
+        height: 50px;
+        padding: 19px 24px;
+        box-sizing: border-box;
+        background-color: #f3f3;
+        border: none;
+        font: bold italic 12px/12px Georgia;
+        
+    }
+    input[type=file]{
+        border: none;
+        font: bold italic 30px/12px Georgia;
+        padding: 12px 12px;
+    }
+    
+    button{
+        font: bold italic 30px/12px Georgia;
+        border:none;
+        color:white;
+        padding: 20px 30px 20px;
+        border-radius: 9px;
+        border-color: green;
+        background-color: dodgerblue;
+        opacity: 1;
+    }
+    button:hover{
+        padding: 18px 28px 18px;
+        opacity: 0.6;
+        cursor: pointer;
+        background-color: royalblue;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header{
+        text-align: center;
+        background-color: hotpink;
+        overflow: hidden;
+        padding: 20px 10px;
+        font: bold italic 3em Georgia;
+        margin-top: 0;
+        color: white;
+        /* font-size: 4em; */
+    }
+    input[type=text]{
+        width: 72%;
+        height: 50px;
+        padding: 19px 24px;
+        box-sizing: border-box;
+        background-color: #f3f3;
+        border: none;
+        font-size: 30px;
+        
+    }
+    input[type=file]{
+        border: none;
+        font: bold italic 30px/12px Georgia;
+        padding: 12px 12px;
+    }
+    
+    button{
+        font: bold italic 30px/12px Georgia;
+        border:none;
+        color:white;
+        padding: 21px 210px 30px;
+        border-radius: 9px;
+        border-color: green;
+        background-color: dodgerblue;
+        opacity: 1;
+    }
+    button:hover{
+        padding: 19px 207px 28px;
+        opacity: 0.6;
+        cursor: pointer;
+        background-color: royalblue;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .header{
+        text-align: center;
+        background-color: hotpink;
+        overflow: hidden;
+        padding: 20px 10px;
+        margin-top: 0;
+        color: white;
+        font-size: 4em;
+    }
+    input[type=text]{
+        width: 72%;
+        height: 50px;
+        padding: 19px 24px;
+        box-sizing: border-box;
+        background-color: #f3f3;
+        border: none;
+        font-size: 30px;
+        
+    }
+    input[type=file]{
+        border: none;
+        font: bold italic 30px/12px Georgia;
+        padding: 12px 12px;
+    }
+    
+    button{
+        font: bold italic 30px/12px Georgia;
+        border:none;
+        color:white;
+        padding: 21px 210px 30px;
+        border-radius: 9px;
+        border-color: green;
+        background-color: dodgerblue;
+        opacity: 1;
+    }
+    button:hover{
+        padding: 19px 207px 28px;
+        opacity: 0.6;
+        cursor: pointer;
+        background-color: royalblue;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .header{
+        text-align: center;
+        background-color: hotpink;
+        overflow: hidden;
+        padding: 30px 15px;
+        margin-top: 0;
+        color: white;
+        font: bold italic 3em/12px Georgia;
+    }
+    input[type=text]{
+        width: 52%;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        background-color: #f3f3;
+        border: none;
+    }
+    input[type=file]{
+        border: none;
+    }
+    button{
+        font: bold italic 30px/12px Georgia;
+        border:none;
+        color:black;
+        border-radius: 9px;
+        border-color: green;
+        background-color: dodgerblue;
+        opacity:0.9;
+    }
+    button:hover{
+        padding: 13px;
+        opacity: 1;
+        cursor: pointer;
+        background-color: royalblue;
+    }
+}

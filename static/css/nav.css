@@ -2,7 +2,7 @@
 
 .header {
   overflow: hidden;
-  background-color: hotpink;
+  background-color: #ff69b4;
   padding: 20px 10px;
 }
 
@@ -15,11 +15,15 @@
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .header a.logo {
   font-size: 25px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .header a:hover {

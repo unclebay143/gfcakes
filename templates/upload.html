@@ -1,0 +1,20 @@
+{% load static %}
+<title>Admin: Upload Cakes</title>
+<link rel="stylesheet" href="{% static 'css/upload.css' %}">
+<div class="container">
+<h1 class="header">G.F Cakes Upload</h1>
+    <div class="content">
+        <form action="">
+            <input type="text" name="cake" placeholder="Cake name" id="">
+            <br><br>
+            <input type="file" name="" id="">
+            <br><br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</div>
+{{post.cake_info}}
+{{post.cake_name}}
+{{post.cake_image}}
+{{photo.cake_image.url}}
+

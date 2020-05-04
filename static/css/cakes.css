@@ -9,9 +9,9 @@ body {
   box-sizing: border-box;
 }
 
-.row{
-	padding:margin:12px;
-}
+/* .row{
+   margin:12px; or padding:12px 
+} */
 .row > .column {
   padding: 10px 8px;
 }
@@ -26,11 +26,11 @@ body {
   float: left;
   width: 25%; /* for 4 image display*/
 }
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
 	.column{
 		width:33.33%;
 	}
-}
+} */
 
 .content img{
 	border-radius: 12px;
@@ -118,12 +118,12 @@ body {
 	width:px;
 	height: px;
 }
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
 	myslides img{
 		width:250px;
 		height: 250px;
 	}
-}
+} */
 
 .cursor {
   cursor: pointer;
@@ -187,4 +187,28 @@ img.hover-shadow {
 
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
 }
