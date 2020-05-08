@@ -3,203 +3,27 @@
 {% block title %} G.F. Cakes {% endblock %}
 {% block content %}
 {% include 'nav.html' %}
-<link rel="stylesheet" href="{% static 'css/cakes.css' %}">
+{% for post in post.all %}
+<link rel="stylesheet" href="{% static 'css/fond.css' %}">
 <div class="main">
   <div class="row">
     <div class="column">
       <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        <img src="{{post.cake_image.url}}" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
         <div class="imgcaption">
-          <h3>Cake 1</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 2</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/3.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 3</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/4.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 4</h3>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- <div class="row"> -->
-    <div class="column">
-      <div class="content">
-        <img src="static/img/5.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 5</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/6.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 6</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/7.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 7</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/8.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 8</h3>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- <div class="row"> -->
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 9</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 10</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 11</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 12</h3>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- <div class="row"> -->
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 13</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 14</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 15</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 16</h3>
-        </div>
-      </div>
-    </div>
-  <!-- </div> -->
-  <!-- <div class="row"> -->
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 17</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 18</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 19</h3>
-        </div>
-      </div>
-    </div>
-    <div class="column">
-      <div class="content">
-        <img src="static/img/1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>Cake 20</h3>
+          <h3>{{post.cake_name}}</h3>
         </div>
       </div>
     </div>
   </div>
-
   <div id="myModal" class="modal">
     <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
 
       <div class="mySlides">
         <div class="numbertext">1 / 4</div>
-        <img src="static/img/1.jpg" class="modal-img" style="width:100%">
+        <img src="{{post.cake_image.url}}" class="modal-img" style="width:100%">
       </div>
-
-      <div class="mySlides">
-        <div class="numbertext">2 / 4</div>
-        <img src="static/img/2.jpg" class="modal-img" style="width:100%">
-      </div>
-
-      <div class="mySlides">
-        <div class="numbertext">3 / 4</div>
-        <img src="static/img/3.jpg" class="modal-img" style="width:100%">
-      </div>
-      
-      <div class="mySlides">
-        <div class="numbertext">4 / 4</div>
-        <img src="static/img/4.jpg" class="modal-img" style="width:100%">
-      </div>
-      
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -209,5 +33,6 @@
     </div>
   </div>  
 </div>
+{% endfor %}
 {% include 'foot.html' %}
 {% endblock %}

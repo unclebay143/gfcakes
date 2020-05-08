@@ -26,11 +26,11 @@ body {
   float: left;
   width: 25%; /* for 4 image display*/
 }
-/* @media screen and (max-width: 600px){
+@media screen and (max-width: 600px){
 	.column{
 		width:33.33%;
 	}
-} */
+}
 
 .content img{
 	border-radius: 12px;
