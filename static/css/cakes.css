@@ -1,17 +1,15 @@
 body {
   font-family: Verdana, sans-serif;
   margin: 0;
-  /*padding: 20px;*/
 }
 
 
 * {
   box-sizing: border-box;
 }
-
-/* .row{
-   margin:12px; or padding:12px 
-} */
+.column{
+  float: left;
+}
 .row > .column {
   padding: 10px 8px;
 }
@@ -20,77 +18,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-.column {
-  float: left;
-  width: 25%; /* for 4 image display*/
-}
-@media screen and (max-width: 600px){
-	.column{
-		width:33.33%;
-	}
-}
-
-.content img{
-	border-radius: 12px;
-	width:250px;
-	height:250px;
-}
-
-@media screen and (max-width: 600px){
-	.content img{
-		width: auto;
-		height: 100px;
-	}
-}
-
-.imgcaption{
-	text-align: center;
-	background-color:#dddd;
-}
-
-/* The Modal (background) */
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: hotpink;
-}
-
-.modal-img{
-	height: 450px;
-	border-radius: 12px;
-}
-
-@media screen and (max-width:800px){
-	.modal-img{
-		height:300px;
-	}
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: hotpink;
-  margin: auto;
-  padding: 10;
-  width: 40%;
-  /*max-width: 1200px;*/
-}
-
-@media screen and (max-width: 600px){
-	.modal-content{
-	    width: 100%;
-	    max-width: 100%;
-	}
 }
 
 /* The Close Button */
@@ -109,21 +36,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
-.mySlides {
-  display: none;
-}
-
-.mySlides img{
-	width:px;
-	height: px;
-}
-/* @media screen and (max-width: 600px){
-	myslides img{
-		width:250px;
-		height: 250px;
-	}
-} */
 
 .cursor {
   cursor: pointer;
@@ -167,7 +79,7 @@ body {
   position: absolute;
   top: 0;
 }
-
+ 
 img {
   margin-bottom: -6px;
 }
@@ -188,27 +100,132 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .example {background: red;}
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {background: green;}
+
+@media screen and (max-width: 600px){
+  .column{
+    width:33.33%;
+  }
+
+  .content img{
+    border-radius: 12px;
+    height:100px;
+  }
+
+
+  .imgcaption{
+    text-align: center;
+    background-color:#dddd;
+    font: bold italic 0.9em Georgia;
+  }
+
+  /* The Modal (background) */
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hotpink;
+  }
+  .modal-content{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-img{
+    height: 450px;
+    border-radius: 12px;
+    position: relative;
+    background-color: hotpink;
+    margin: auto;
+    padding: 10;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  .example {background: blue;}
+  .column{
+    width:33.33%;
+  }
+  .content img{
+    border-radius: 12px;
+    width:260px;
+    height:260px;
+  }
 } 
+
+
+@media screen and (max-width:800px){
+  .modal-img{
+    height:300px;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: hotpink;
+    margin: auto;
+    padding: 10;
+    width: 40%;
+    /*max-width: 1200px;*/
+  }
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .example {background: orange;}
-} 
+  .column{
+    width:25%;
+  }
+
+  .content img{
+    border-radius: 12px;
+    width:250px;
+    height:250px;
+  }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .example {background: pink;}
+  .column{
+    width:25%;
+  }
+
+  .content img{
+    border-radius: 12px;
+    width:250px;
+    height:250px;
+  }
+  /* The Modal (background) */
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: hotpink;
+  }
+  .modal-content{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .modal-img{
+    height: 450px;
+    border-radius: 12px;
+    position: relative;
+    background-color: hotpink;
+    margin: auto;
+    padding: 10;
+  }
 }

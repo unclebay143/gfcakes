@@ -4,17 +4,17 @@
 <div class="container">
 <h1 class="header">G.F Cakes Upload</h1>
     <div class="content">
-        <form action="">
-            <input type="text" name="cake" placeholder="Cake name" id="">
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <!-- install crispy for better forms look -->
+            <!-- <input type="text" name="cake" placeholder="Cake name" id="">
             <br><br>
             <input type="file" name="" id="">
-            <br><br>
-            <button type="submit">Upload</button>
+            <br><br> -->
+            <button type="submit" onchange="alert('Cakes Uploaded Successfully...Visit Cake Page To View');">Upload</button>
         </form>
     </div>
 </div>
-{{post.cake_info}}
-{{post.cake_name}}
-{{post.cake_image}}
-{{photo.cake_image.url}}
+
 

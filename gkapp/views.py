@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import *
-
+from .forms import PostCake
 # Create your views here.
 
 def Link(request):
@@ -22,7 +22,15 @@ def Store(request):
     return render(request, 'store.html')
 
 def Upload(request):
-    return render(request, 'upload.html')
+    form = PostCake() 
+    
+    if request.method == 'POST':
+        form = PostCake(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+    context = {'form':form}
+    return render(request, 'upload.html', context)
 
 def Fond(request):
+    paginate_by = 3
     return render(request, 'fond.html')
