@@ -1,2 +1,2 @@
 # G.FCakes
- website to check out available cakes
+Client Website - for Customers to check out available Cakes
