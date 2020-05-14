@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} G.F. Cakes {% endblock %}
+{% block extra %}<link rel="stylesheet" href="{% static 'css/cakes.css' %}">{% endblock %}
+{% block extras %}<link rel="stylesheet" href="{% static 'css/update.css' %}">{% endblock %}
+{% block content %}
+{% include 'nav.html' %}
+{{object.cake_name}}
+{% include 'foot.html' %}
+{% endblock %}

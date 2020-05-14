@@ -1,39 +1,56 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} G.F. Cakes {% endblock %}
+{% block extra %}<link rel="stylesheet" href="{% static 'css/cakes.css' %}">{% endblock %}
+{% block extras %}<link rel="stylesheet" href="{% static 'css/update.css' %}">{% endblock %}
 {% block content %}
 {% include 'nav.html' %}
-{% for post in post.all %}
-<link rel="stylesheet" href="{% static 'css/fond.css' %}">
-<div class="main">
-  <div class="row">
-    <div class="column">
-      <div class="content">
-        <img src="{{post.cake_image.url}}" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-        <div class="imgcaption">
-          <h3>{{post.cake_name}}</h3>
+{% if post_list.has_other_pages %}  
+    <nav aria-label="Page navigation conatiner"></nav> 
+      {% if post_list.has_previous %}    
+        <a href="?page={{ post_list.previous_page_number }}">&raquo;Prev</a>
+      {% endif %}
+      <span class="current">
+        Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}.
+      </span>
+      {% if post_list.has_next %}    
+      <a href="?page={{ post_list.next_page_number }}">&laquo;Next</a>
+      {% endif %}
+{% endif %} 
+{% for post_list in post_list %}
+  <div class="main">
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <a href="{% url 'cakeinfo' cakes.pk %}"></a>
+          <img src="{{post_list.cake_image.url}}" id="{{post_list.id}}" style="width:100%"
+           onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          <div class="imgcaption">
+            <h3>{{post_list.cake_name}}</h3>
+          </div>
         </div>
       </div>
     </div>
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img src="{{post_list.cake_image.url}}" class="modal-img" style="width:100%">
+          <br /><p>{{post_list.id}}</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      </div>
+    </div>  
   </div>
-  <div id="myModal" class="modal">
-    <span class="close cursor" onclick="closeModal()">&times;</span>
-    <div class="modal-content">
-
-      <div class="mySlides">
-        <div class="numbertext">1 / 4</div>
-        <img src="{{post.cake_image.url}}" class="modal-img" style="width:100%">
-        <!-- <br /><p>{{post.cake_name}}</p> -->
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      <div class="caption-container">
-        <p id="caption"></p>
-      </div>
-    </div>
-  </div>  
 </div>
-{% endfor %}
+  {% endfor %}
+    
+
 {% include 'foot.html' %}
 {% endblock %}

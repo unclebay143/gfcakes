@@ -10,8 +10,9 @@
     <script src="{% static 'js/imgexpand.js' %}"></script>
     <script src="{% static 'js/next.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-</head>
+    {% block extra %} {% endblock %}
+    {% block extras %} {% endblock %}
+ </head>
 <body>
     {% block content %}
 

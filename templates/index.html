@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %} Welcome {% endblock %}
+{% block extra %}<link rel="stylesheet" href="{% static 'css/index.css' %}">{% endblock %}
     {% block content %}
     {% include 'nav.html' %}
         <div class="container">

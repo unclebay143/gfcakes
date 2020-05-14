@@ -1,6 +1,5 @@
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/nav.css' %}">
-
+{% block extra %}  <link rel="stylesheet" href="{% static 'css/nav.css' %}"> {% endblock %}
 {% block content %}
 <div class="header">
   <a href="{% url 'index' %}" class="logo">G.F Cakes</a>

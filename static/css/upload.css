@@ -94,7 +94,7 @@ body{
         opacity: 1;
     }
     button:hover{
-        padding: 18px 28px 18px;
+        /* padding: 18px 28px 18px; */
         opacity: 0.6;
         cursor: pointer;
         background-color: royalblue;
@@ -140,7 +140,7 @@ body{
         opacity: 1;
     }
     button:hover{
-        padding: 19px 207px 28px;
+        /* padding: 19px 207px 28px; */
         opacity: 0.6;
         cursor: pointer;
         background-color: royalblue;
@@ -186,7 +186,7 @@ body{
         opacity: 1;
     }
     button:hover{
-        padding: 19px 207px 28px;
+        /* padding: 19px 207px 28px; */
         opacity: 0.6;
         cursor: pointer;
         background-color: royalblue;
@@ -225,7 +225,7 @@ body{
         opacity:0.9;
     }
     button:hover{
-        padding: 13px;
+        /* padding: 13px; */
         opacity: 1;
         cursor: pointer;
         background-color: royalblue;

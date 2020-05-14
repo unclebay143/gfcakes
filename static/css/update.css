@@ -1,0 +1,46 @@
+.content{
+    position: relative;
+}
+
+.imgcaption{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width:600px){
+    .content{
+        position: relative;
+    }
+
+      .content img{
+        cursor: pointer;
+        box-shadow: 0 3px 4px 0 wheat;
+        color: hotpink;
+      }
+      
+      .imgcaption{
+        text-align: center;
+        font: bold italic 0.9em Georgia;
+        /* background-color:palevioletred; */
+        color: wheat;
+      }
+    .imgcaption, .imgcaption h3{
+        display: ;
+    }
+    .imgcaption h3{
+        background-color: palevioletred;
+        width:100px;
+        border-radius: 3px;
+    }
+    .imgcaption{
+        position: absolute;
+        top: 69px;
+        left: 2px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color:none;
+    }  
+}
