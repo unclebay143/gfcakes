@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404
 from .models import Cake
 from .forms import PostCake
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.conf import settings
+import os
+from django.templatetags.static import static
 # Create your views here.
 
 def Link(request):
@@ -22,16 +25,17 @@ def  Cakes(request):
     except EmptyPage:
         post_list= paginator.page(paginator.num_pages)
     return render(request, 'cakes.html',{'page': page, 'post_list': post_list})
-def cakeinfo(request):
-    model = Cake
-    return render(request, 'cake_info.html')
+
 
 def Contact(request):
     return render(request, 'contact.html')
 
 def Store(request):
+    path = settings.MEDIA_ROOT
+    img_list = os.listdir(path)
+    context = {'images': img_list}
 
-    return render(request, 'store.html')
+    return render(request, 'store.html', context)
 
 def Upload(request):
     form = PostCake() 

@@ -5,6 +5,8 @@
 {% block extras %}<link rel="stylesheet" href="{% static 'css/update.css' %}">{% endblock %}
 {% block content %}
 {% include 'nav.html' %}
+<h3 style="text-align: center; color:white; word-spacing:3px; background-color:black; font-style:italic; overflow:hidden; ">
+  Site under production <br /> at <br /> Walk-In Tech &copy; 2016</h3>
 {% if post_list.has_other_pages %}  
     <nav aria-label="Page navigation conatiner"></nav> 
       {% if post_list.has_previous %}    
@@ -12,7 +14,7 @@
       {% endif %}
       <span class="current">
         Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}.
-      </span>
+      </span>     
       {% if post_list.has_next %}    
       <a href="?page={{ post_list.next_page_number }}">&laquo;Next</a>
       {% endif %}
@@ -22,9 +24,7 @@
     <div class="row">
       <div class="column">
         <div class="content">
-          <a href="{% url 'cakeinfo' cakes.pk %}"></a>
-          <img src="{{post_list.cake_image.url}}" id="{{post_list.id}}" style="width:100%"
-           onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+          <img src="{{post_list.cake_image.url}}" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
           <div class="imgcaption">
             <h3>{{post_list.cake_name}}</h3>
           </div>
@@ -49,7 +49,7 @@
     </div>  
   </div>
 </div>
-  {% endfor %}
+{% endfor %}
     
 
 {% include 'foot.html' %}
