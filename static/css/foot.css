@@ -1,7 +1,17 @@
 .container-foot{
+    background-color: hotpink;
     box-shadow: 12px;
     overflow: hidden;
     font-family: Times, 'Times New Roman', serif;
     clear: both;
     text-align: center;
+    left: 0;
+    bottom:0;
+    position: fixed;
+    width: 100%;
+    padding: 12px 12px;
+}
+
+.container-foot a{
+    text-decoration: none;
 }

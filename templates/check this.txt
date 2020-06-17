@@ -1,0 +1,27 @@
+
+
+<div>
+<ul>
+{% for image in obj.images_set.all %} 
+  <li class="col-lg-4 text-center">
+   <a data-toggle="modal"data-target="#myModal{{image.pk}} 
+{{forloop.counter0}}"> 
+  <img src="{{ image.image.url }}" alt=""/></a>
+  </li>
+
+{% endfor %}
+
+</ul>
+</div>
+
+
+{% for image in obj.images_set.all %}
+<div id="myModal{{ image.pk }}{{forloop.counter0}}" class="modal fade" 
+ role="dialog">
+<div class="modal-dialog" style="text-align:center;">
+ <div class="modal-content" style="display:inline-block;">
+    <img src="{{ image.image.url }}" alt=""/>
+ </div>
+</div>
+</div>
+ {% endfor %}

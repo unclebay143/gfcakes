@@ -1,27 +1,53 @@
 {% extends 'storebase.html'%}
 {% load photo_tags %}
 {% block body %}
+{% if post_list.has_other_pages %}  
+    <nav aria-label="Page navigation conatiner"></nav> 
+      {% if post_list.has_previous %}    
+        <a href="?page={{ post_list.previous_page_number }}">&raquo;Prev</a>
+      {% endif %}
+      <span class="current">
+        Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}.
+	  </span>     
+	  {% if post_list.has_next %}    
+	  <a href="?page={{ post_list.next_page_number }}">&laquo;Next</a>
+	  {% endif %}
+      
+{% endif %}
+<div class='container'>
+	<div class="gallery">
+		{% for i in i %}
+						<div class="imgcaption">
+							<h3>{{i.cake_name}}</h3>
+						</div>
+						{% endfor %}
 	{% if images %}
 		{% for image in images %}
 			{% with image|split:'.' as strs %}
 				{% with strs|length as str_arr_len %}
 					{% with str_arr_len|add:'-1' as ext_idx %}
 						{% if strs|get_by_index:ext_idx == 'jpg' %}
-							<a href="{{ MEDIA_URL }}img/{{ image }}">
-								<img src="{{ MEDIA_URL }}img/{{ image }}" alt="{{ image }}">
+						
+						<a href="{{ MEDIA_URL }}img/{{ image }}" class="imgimg">
+
+								<img src="{{ MEDIA_URL }}img/{{ image }}" alt="{{ image }}" class="imgimg">
+								
 							</a>
 						{% endif %}
 					{% endwith %}
 				{% endwith %}
 			{% endwith %}
-			{% if forloop.counter|divisibleby:6 %}
+			{% if forloop.counter|divisibleby:5 %}
 				<div class="clear"></div>
 			{% endif %}
 		{% endfor %}
 	{% else %}
 		<p>No image available.</p>
 	{% endif %}
-{% endblock body %}
+</div>
+</div>
+
+	{% endblock body %}
 
 {% block extra_js %}
 	<script type='text/javascript'>

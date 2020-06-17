@@ -16,7 +16,7 @@ def Index(request):
 
 def  Cakes(request):
     post_list = Cake.objects.all()
-    paginator = Paginator(post_list, 8)
+    paginator = Paginator(post_list, 12)
     page = request.GET.get('page')
     try:
         post_list = paginator.page(page)
@@ -31,11 +31,18 @@ def Contact(request):
     return render(request, 'contact.html')
 
 def Store(request):
+    info_list = Cake.objects.all()
     path = settings.MEDIA_ROOT
     img_list = os.listdir(path)
-    context = {'images': img_list}
-
-    return render(request, 'store.html', context)
+    paginator = Paginator(img_list, 15)
+    page = request.GET.get('page')
+    try:
+        img_list = paginator.page(page)
+    except PageNotAnInteger:
+        img_list = paginator.page(1)
+    except EmptyPage:
+        img_list= paginator.page(paginator.num_pages)
+    return render(request, 'store.html',{'page': page, 'post_list': img_list, 'images':img_list, 'i':info_list})
 
 def Upload(request):
     form = PostCake() 
@@ -49,3 +56,10 @@ def Upload(request):
 
 def prototype(request):
     return render(request, 'prototype.html')
+
+def boot(request):
+    images = Cake.objects.all()
+    context = {
+        "img":images
+    }
+    return render(request, 'bootstrap-cake.html', context)

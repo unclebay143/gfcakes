@@ -1,10 +1,11 @@
+
 .container{
     padding: 12px;
 }
 
 .img-gallery{
     display: flex;    
-    margin-top: 15px;
+    margin-top: 79px;
 }
 
 .img-gallery #img-g{
@@ -20,7 +21,7 @@
 
 @media screen and (max-width: 300px){
     .img-gallery #img-g{
-        width: 100px;
+        /*width: 100px;*/
         height:190px;
     }
 
@@ -43,13 +44,16 @@ a{
 #about{
     background-color: pink;
     width: fit-content;
-    padding: 32px;
+    padding: 9px;
     border-radius: 9px;
-    margin-top: 27px;
-    font-size: larger;
+    /* margin-top: 27px; */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
     
+}
+
+#about span{
+    font-size: 5vw;
 }
 
 .container-bg{
@@ -62,14 +66,18 @@ a{
 .contactus{
     padding:14px;
     margin:43px;
+    margin-bottom:120px; /* footer static effect prevention (overlay)*/
     background-color: #f9c0cb;
-    /* opacity: 0.9; */
+     /*opacity: 0.9; */
     border-radius: 9px;
     line-height: 1.0;
     font-size: larger;
     font-family: Times, 'Times New Roman', serif;
 }
 
+.contactus p, address{
+    font-size:5vw;
+}
 @media screen and (max-width: 600px){
     .contactus{
         text-align: left;
@@ -78,5 +86,32 @@ a{
         line-height: 2.0;
         font-family: Times, 'Times New Roman', serif;
 
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #about span, .contactus p, address{
+        font-size:1.4em;
     }
 }

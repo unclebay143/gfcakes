@@ -4,6 +4,19 @@
   overflow: hidden;
   background-color: #ff69b4;
   padding: 20px 10px;
+  left: 0;
+  top:0;
+  position: fixed;
+  width:100%;
+  /* I want a sticky navbar and footer but i do not want it to be overlayed by the images/ contents when scrolling */
+  z-index:99;
+  /* next from here is the home page(index)image, i am going to shift it downs*/
+}
+
+.header:after{
+  content: "";
+  clear: both;
+  
 }
 
 .header a {

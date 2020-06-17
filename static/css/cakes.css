@@ -7,6 +7,12 @@ body {
 * {
   box-sizing: border-box;
 }
+.content{
+  /* margin: 23px; affect the image but looks good */
+}
+
+
+
 
 
 .demo {
@@ -87,6 +93,36 @@ img.hover-shadow {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+
+  span.current{
+    display: block;
+    margin-left: 35%;    
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+
+  .stroll_btn{
+
+    margin-bottom: 12px;
+
+  }
+  
+  .next_btn, .prev_btn{
+    background: hotpink;
+    color:white;
+    text-align:center;
+    padding:9px 13px;
+    text-decoration: none;
+  }
+  
+  .next_btn{
+    margin-left: 106px;
+
+  }
+  .prev_btn{
+    margin: 21px;
+  }
+
 .column{
   padding: 10px 8px;
   float: left;
@@ -104,7 +140,7 @@ border-radius: 12px;
 }
 
 
-.modal {
+.modal, .modalstyle {
     display: none;
     position: fixed;
     z-index: 1;
@@ -131,10 +167,38 @@ border-radius: 12px;
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+
+  span.current{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;    
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+  
+  .stroll_btn{
+    margin-bottom: 12px;
+  }
+
+  .next_btn, .prev_btn{
+    background: hotpink;
+    color:white;
+    padding:12px;
+    text-decoration: none;
+  }
+  
+  .next_btn{
+    margin-left: 550px;
+  }
+  .prev_btn{
+    margin: 21px;
+  }
+
   .column{
     padding: 10px 8px;
     float: left;
-    width: 25%;
+    width: 33.33%;
   }
   .column:after {
     content: "";
@@ -146,6 +210,14 @@ border-radius: 12px;
     height: 250px;
     border-radius: 12px;
   }
+
+  .imgcaption{
+    text-align: center;
+    font: bold italic 0.9em Georgia;
+    background-color:palevioletred;
+    color: wheat;
+  }
+ 
 
   .modal {
     display: none;
@@ -176,6 +248,7 @@ border-radius: 12px;
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  
   .column{
     padding: 10px 8px;
     float: left;
@@ -290,6 +363,35 @@ border-radius: 12px;
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+  span.current{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;    
+    margin-top: 19px;
+    margin-bottom: 19px;
+  }
+  
+  .stroll_btn{
+    margin-bottom: 12px;
+  }
+
+  .next_btn, .prev_btn{
+    background: hotpink;
+    color:white;
+    padding:12px;
+    text-decoration: none;
+  }
+  
+  .next_btn{
+    margin-left: 77%;
+  }
+  .prev_btn{
+    margin: 4%;
+  }
+
+
   .column{
     padding: 10px 8px;
     float: left;

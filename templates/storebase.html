@@ -6,24 +6,18 @@
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'css/simplelightbox.min.css' %}">
-{% block extra %}<link rel="stylesheet" href="{% static 'css/cakes.css' %}">{% endblock %}
-{% block extras %}<link rel="stylesheet" href="{% static 'css/update.css' %}">{% endblock %}
+        <!-- <link rel="stylesheet" href="{% static 'css/cakes.css' %}"> -->
+        <!-- <link rel="stylesheet" href="{% static 'css/update.css' %}"> -->
         <!-- JAVASCRIPT -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+        <script> window.jQuery || document.write('<script src="{% static 'js/jquery.js' %}"><\/script>')</script>
         <script type="text/javascript" src="{% static 'js/simple-lightbox.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery-2.2.4.min.js' %}"></script>
     </head>
     <body>
-	    <div class='container'>
-		    <div class="gallery">
-                <div class="main">
-                    <div class="row">
-                      <div class="column">
-                        <div class="content">
+	    
                 {% block body %}{% endblock body %}
 		    </div>
-		</div></div>
-    </div>
+		</div>
         {% block extra_js %}{% endblock extra_js %}
     </body>
 </html>
